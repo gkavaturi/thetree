@@ -1,0 +1,262 @@
+2018-06-06 23:27:16.818 PDT [13269] LOG:  listening on IPv6 address "::1", port 5432
+2018-06-06 23:27:16.818 PDT [13269] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2018-06-06 23:27:16.819 PDT [13269] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2018-06-06 23:27:16.860 PDT [13270] LOG:  database system was shut down at 2018-06-06 23:27:11 PDT
+2018-06-06 23:27:16.863 PDT [13269] LOG:  database system is ready to accept connections
+2018-06-06 23:27:18.595 PDT [13280] FATAL:  lock file "postmaster.pid" already exists
+2018-06-06 23:27:18.595 PDT [13280] HINT:  Is another postmaster (PID 13269) running in data directory "/usr/local/var/postgres"?
+2018-06-06 23:28:10.805 PDT [13574] FATAL:  role "postgres" does not exist
+2018-06-06 23:28:22.295 PDT [13647] FATAL:  database "gkavatu" does not exist
+2018-06-06 23:29:15.086 PDT [13929] ERROR:  syntax error at or near "describe" at character 1
+2018-06-06 23:29:15.086 PDT [13929] STATEMENT:  describe tables;
+2018-06-06 23:29:26.602 PDT [13929] ERROR:  syntax error at or near "1" at character 1
+2018-06-06 23:29:26.602 PDT [13929] STATEMENT:  1
+	2
+	3
+	4
+	CREATE TABLE table_name (
+	 column_name TYPE column_constraint,
+	 table_constraint table_constraint
+	) INHERITS existing_table_name;
+2018-06-06 23:29:56.786 PDT [14122] ERROR:  syntax error at or near "describe" at character 1
+2018-06-06 23:29:56.786 PDT [14122] STATEMENT:  describe tables;
+2018-06-06 23:30:00.139 PDT [14122] ERROR:  unrecognized configuration parameter "tables"
+2018-06-06 23:30:00.139 PDT [14122] STATEMENT:  show tables;
+2018-06-06 23:30:20.340 PDT [14122] ERROR:  syntax error at or near "column_constraint" at character 45
+2018-06-06 23:30:20.340 PDT [14122] STATEMENT:  CREATE TABLE table_name (
+	 column_name TYPE column_constraint,
+	 table_constraint table_constraint
+	) INHERITS existing_table_name;
+2018-06-07 01:07:08.341 PDT [14122] ERROR:  null value in column "created_on" violates not-null constraint
+2018-06-07 01:07:08.341 PDT [14122] DETAIL:  Failing row contains (1, adam, 123, adam@xyz.com, null, null).
+2018-06-07 01:07:08.341 PDT [14122] STATEMENT:  insert into account(username, password, email) values('adam','123','adam@xyz.com');
+2018-06-07 01:08:11.248 PDT [14122] ERROR:  syntax error at or near ";" at character 44
+2018-06-07 01:08:11.248 PDT [14122] STATEMENT:  ALTER TABLE account ALTER COLUMN created_on;
+2018-06-07 20:02:24.678 PDT [62294] ERROR:  syntax error at or near "'
+	select * from account
+	SELECT NOW()
+	select username, password from account'" at character 13
+2018-06-07 20:02:24.678 PDT [62294] STATEMENT:  SELECT NOW()'
+	select * from account
+	SELECT NOW()
+	select username, password from account'
+	select * from account;
+2018-06-07 20:28:36.431 PDT [75953] FATAL:  role "user" does not exist
+2018-06-07 20:32:26.333 PDT [77409] FATAL:  database "strong_password" does not exist
+2018-06-07 20:32:41.210 PDT [77470] FATAL:  database "app_user" does not exist
+2018-06-07 20:33:32.155 PDT [77590] ERROR:  syntax error at or near "chewieter" at character 8
+2018-06-07 20:33:32.155 PDT [77590] STATEMENT:  create chewieter;
+2018-06-07 20:40:14.058 PDT [80031] ERROR:  syntax error at or near "db" at character 8
+2018-06-07 20:40:14.058 PDT [80031] STATEMENT:  create db;
+2018-06-07 20:40:28.645 PDT [80031] ERROR:  permission denied to create database
+2018-06-07 20:40:28.645 PDT [80031] STATEMENT:  create database db;
+2018-06-07 20:55:09.323 PDT [85156] ERROR:  relation "account" does not exist at character 15
+2018-06-07 20:55:09.323 PDT [85156] STATEMENT:  select * from account;
+2018-06-07 20:55:19.898 PDT [85156] ERROR:  syntax error at or near "use" at character 1
+2018-06-07 20:55:19.898 PDT [85156] STATEMENT:  use gkavatu;
+2018-06-07 21:09:22.043 PDT [87361] ERROR:  column "name" does not exist at character 36
+2018-06-07 21:09:22.043 PDT [87361] STATEMENT:  select username from account where name='eve';
+2018-06-07 21:56:54.660 PDT [87361] ERROR:  syntax error at or near "p" at character 1
+2018-06-07 21:56:54.660 PDT [87361] STATEMENT:  p;
+2018-06-07 21:57:01.529 PDT [87361] ERROR:  syntax error at or near "'
+	
+	
+	/;'';'" at character 1
+2018-06-07 21:57:01.529 PDT [87361] STATEMENT:  '
+	
+	
+	/;'';'[
+	/;
+2018-06-07 22:39:36.407 PDT [17830] ERROR:  column "password" does not exist at character 8
+2018-06-07 22:39:36.407 PDT [17830] STATEMENT:  SELECT password as name where username=$1::text
+2018-06-08 20:55:53.656 PDT [87361] ERROR:  null value in column "created_on" violates not-null constraint
+2018-06-08 20:55:53.656 PDT [87361] DETAIL:  Failing row contains (1, 2, My first tweet, null, null).
+2018-06-08 20:55:53.656 PDT [87361] STATEMENT:  insert into posts(user_id, messageBody) values(2,'My first tweet');
+2018-06-08 20:55:55.534 PDT [87361] ERROR:  null value in column "created_on" violates not-null constraint
+2018-06-08 20:55:55.534 PDT [87361] DETAIL:  Failing row contains (2, 2, My second tweet ! oh boy, null, null).
+2018-06-08 20:55:55.534 PDT [87361] STATEMENT:  insert into posts(user_id, messageBody) values(2,'My second tweet ! oh boy');
+2018-06-08 20:56:10.487 PDT [87361] ERROR:  null value in column "created_on" violates not-null constraint
+2018-06-08 20:56:10.487 PDT [87361] DETAIL:  Failing row contains (3, 2, My second tweet ! oh boy, null, null).
+2018-06-08 20:56:10.487 PDT [87361] STATEMENT:  insert into posts(user_id, messageBody) values(2,'My second tweet ! oh boy');
+2018-06-08 21:08:55.685 PDT [87361] ERROR:  syntax error at or near "[" at character 60
+2018-06-08 21:08:55.685 PDT [87361] STATEMENT:  insert into subscriptions(user_id, subscriptions) values(2,[1]);
+2018-06-08 21:09:09.457 PDT [87361] ERROR:  malformed array literal: "[1]" at character 60
+2018-06-08 21:09:09.457 PDT [87361] DETAIL:  Missing "=" after array dimensions.
+2018-06-08 21:09:09.457 PDT [87361] STATEMENT:  insert into subscriptions(user_id, subscriptions) values(2,'[1]');
+2018-06-08 21:09:15.239 PDT [87361] ERROR:  malformed array literal: "[1]" at character 61
+2018-06-08 21:09:15.239 PDT [87361] DETAIL:  Missing "=" after array dimensions.
+2018-06-08 21:09:15.239 PDT [87361] STATEMENT:  insert into subscriptions(user_id, subscriptions) values(2, '[1]');
+2018-06-08 21:09:29.117 PDT [87361] ERROR:  null value in column "created_on" violates not-null constraint
+2018-06-08 21:09:29.117 PDT [87361] DETAIL:  Failing row contains (2, {1}, null, null).
+2018-06-08 21:09:29.117 PDT [87361] STATEMENT:  insert into subscriptions(user_id, subscriptions) values(2, '{1}');
+2018-06-08 21:18:39.259 PDT [87361] ERROR:  syntax error at or near "[" at character 60
+2018-06-08 21:18:39.259 PDT [87361] STATEMENT:  insert into subscriptions(user_id, subscriptions) values(3,[1,2]);
+2018-06-08 21:22:21.175 PDT [87361] ERROR:  column s.id does not exist at character 95
+2018-06-08 21:22:21.175 PDT [87361] STATEMENT:  SELECT P.* FROM posts AS P 
+	JOIN subscriptions AS S ON P.user_id = ANY(S.subscriptions) WHERE S.id = 3
+	;
+2018-06-08 21:22:29.781 PDT [87361] ERROR:  column s.id does not exist at character 94
+2018-06-08 21:22:29.781 PDT [87361] STATEMENT:  SELECT P.* FROM posts AS P JOIN subscriptions AS S ON P.user_id = ANY(S.subscriptions) WHERE S.id = 3;
+2018-06-08 21:44:17.038 PDT [87361] ERROR:  syntax error at or near "TABLE" at character 15
+2018-06-08 21:44:17.038 PDT [87361] STATEMENT:  SELECT PALTER TABLE subscriptions ALTER COLUMN created_on  FROM posts AS P JOIN subscriptions AS S ON P.user_id = ANY(S.subscriptions) WHERE S.user_id = 3;
+2018-06-08 21:44:52.649 PDT [87361] ERROR:  relation "accounts" does not exist
+2018-06-08 21:44:52.649 PDT [87361] STATEMENT:  truncate accounts;
+2018-06-08 22:31:44.834 PDT [88223] ERROR:  bind message supplies 1 parameters, but prepared statement "get-name" requires 0
+2018-06-08 22:31:44.834 PDT [88223] STATEMENT:  SELECT P.* FROM posts AS P JOIN subscriptions AS S ON P.user_id = ANY(S.subscriptions) WHERE S.user_id = 3
+2018-06-08 22:34:29.851 PDT [89176] ERROR:  bind message supplies 1 parameters, but prepared statement "get-name" requires 0
+2018-06-08 22:34:29.851 PDT [89176] STATEMENT:  SELECT P.* FROM posts AS P JOIN subscriptions AS S ON P.user_id = ANY(S.subscriptions) WHERE S.user_id = 3
+2018-06-08 22:37:50.285 PDT [90211] ERROR:  syntax error at or near "=" at character 114
+2018-06-08 22:37:50.285 PDT [90211] STATEMENT:  SELECT P.* FROM posts AS P JOIN subscriptions AS S ON P.user_id = ANY(S.subscriptions) WHERE S.user_id = username=$1::init
+2018-06-08 22:38:39.922 PDT [90660] ERROR:  type "init" does not exist at character 110
+2018-06-08 22:38:39.922 PDT [90660] STATEMENT:  SELECT P.* FROM posts AS P JOIN subscriptions AS S ON P.user_id = ANY(S.subscriptions) WHERE S.user_id = $1::init
+2018-06-08 22:50:29.038 PDT [87361] ERROR:  type "init" does not exist at character 59
+2018-06-08 22:50:29.038 PDT [87361] STATEMENT:  CREATE TABLE posts(
+	 post_id serial PRIMARY KEY,
+	 user_id init,
+	 message_body TEXT NOT NULL,
+	 created_on TIMESTAMP NOT NULL,
+	 last_edited TIMESTAMP
+	);
+2018-06-08 22:52:32.205 PDT [87361] ERROR:  syntax error at or near "drop" at character 18
+2018-06-08 22:52:32.205 PDT [87361] STATEMENT:  drop table posts
+	drop table subscriptions;
+2018-06-08 22:52:58.354 PDT [87361] ERROR:  column "messagebody" of relation "posts" does not exist at character 28
+2018-06-08 22:52:58.354 PDT [87361] STATEMENT:  insert into posts(user_id, messageBody) values(1,'Adam went on a walk');
+2018-06-08 22:52:58.355 PDT [87361] ERROR:  column "messagebody" of relation "posts" does not exist at character 28
+2018-06-08 22:52:58.355 PDT [87361] STATEMENT:  insert into posts(user_id, messageBody) values(2,'My second tweet! oh boy');
+2018-06-08 22:52:58.357 PDT [87361] ERROR:  column "messagebody" of relation "posts" does not exist at character 28
+2018-06-08 22:52:58.357 PDT [87361] STATEMENT:  insert into posts(user_id, messageBody) values(2,'Eve likes leather jackets');
+2018-06-08 22:52:58.430 PDT [87361] ERROR:  column "messagebody" of relation "posts" does not exist at character 28
+2018-06-08 22:52:58.430 PDT [87361] STATEMENT:  insert into posts(user_id, messageBody) values(1,'Adam like green grass');
+2018-06-08 22:52:58.432 PDT [87361] ERROR:  column "messagebody" of relation "posts" does not exist at character 28
+2018-06-08 22:52:58.432 PDT [87361] STATEMENT:  insert into posts(user_id, messageBody) values(3,'God and his room mate Chugs were arm wrestling on a saturday night');
+2018-06-08 22:52:58.434 PDT [87361] ERROR:  column "messagebody" of relation "posts" does not exist at character 28
+2018-06-08 22:52:58.434 PDT [87361] STATEMENT:  insert into posts(user_id, messageBody) values(3,'God says dont forget to get your own towels to the pool');
+2018-06-09 02:44:50.149 PDT [75956] ERROR:  syntax error at or near ":" at character 113
+2018-06-09 02:44:50.149 PDT [75956] STATEMENT:  update subscriptions set subscriptions = array_cat(subscriptions, $1::int), last_edited = now() where user_id=$2:int
+2018-06-09 02:45:35.933 PDT [76275] ERROR:  function array_cat(integer[], integer) does not exist at character 42
+2018-06-09 02:45:35.933 PDT [76275] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2018-06-09 02:45:35.933 PDT [76275] STATEMENT:  update subscriptions set subscriptions = array_cat(subscriptions, $1::int), last_edited = now() where user_id=$2::int
+2018-06-09 02:51:15.509 PDT [87361] ERROR:  syntax error at or near "{" at character 61
+2018-06-09 02:51:15.509 PDT [87361] STATEMENT:  insert into subscriptions(user_id, subscriptions) values(1,`{2}`);
+2018-06-09 02:55:42.132 PDT [76275] ERROR:  function array_cat(integer[], integer) does not exist at character 42
+2018-06-09 02:55:42.132 PDT [76275] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2018-06-09 02:55:42.132 PDT [76275] STATEMENT:  update subscriptions set subscriptions = array_cat(subscriptions, $1::int), last_edited = now() where user_id=$2::int
+2018-06-09 03:08:21.881 PDT [84268] ERROR:  syntax error at or near "{" at character 71
+2018-06-09 03:08:21.881 PDT [84268] STATEMENT:  insert into subscriptions(subscriptions, user_id, created_on) values(`{$1::int}`, $2::int), now())
+2018-06-09 03:26:16.085 PDT [84268] ERROR:  function array_cat(integer[], integer) does not exist at character 42
+2018-06-09 03:26:16.085 PDT [84268] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2018-06-09 03:26:16.085 PDT [84268] STATEMENT:  update subscriptions set subscriptions = array_cat(subscriptions, $1::int), last_edited = now() where user_id=$2::int
+2018-06-09 03:28:03.746 PDT [87361] ERROR:  function array_cat(integer[], integer) does not exist at character 42
+2018-06-09 03:28:03.746 PDT [87361] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2018-06-09 03:28:03.746 PDT [87361] STATEMENT:  update subscriptions set subscriptions = array_cat(subscriptions, 2), last_edited = now() where user_id=3
+	;
+2018-06-09 03:28:34.504 PDT [87361] ERROR:  function array_cat(integer[], integer) does not exist at character 42
+2018-06-09 03:28:34.504 PDT [87361] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2018-06-09 03:28:34.504 PDT [87361] STATEMENT:  update subscriptions set subscriptions = array_cat(subscriptions, 2) where user_id=3;
+2018-06-09 03:30:22.214 PDT [87361] ERROR:  syntax error at or near "{" at character 68
+2018-06-09 03:30:22.214 PDT [87361] STATEMENT:  update subscriptions set subscriptions = array_cat(subscriptions, `{2}`) where user_id=3;
+2018-06-09 03:31:48.667 PDT [92254] ERROR:  invalid input syntax for integer: "$1::int" at character 67
+2018-06-09 03:31:48.667 PDT [92254] STATEMENT:  update subscriptions set subscriptions = array_cat(subscriptions, '{$1::int}'), last_edited = now() where user_id=$2::int
+2018-06-09 03:34:03.620 PDT [92989] ERROR:  invalid input syntax for integer: "$1::int" at character 67
+2018-06-09 03:34:03.620 PDT [92989] STATEMENT:  update subscriptions set subscriptions = array_cat(subscriptions, '{$1::int}') where user_id=$2::int
+2018-06-09 03:41:20.061 PDT [87361] ERROR:  syntax error at or near "select" at character 87
+2018-06-09 03:41:20.061 PDT [87361] STATEMENT:  insert into subscriptions(subscriptions, user_id, created_on) values('{1}', 2, now())
+	select * from subscriptions;
+2018-06-09 03:48:39.176 PDT [92989] ERROR:  invalid input syntax for integer: "$1::int" at character 67
+2018-06-09 03:48:39.176 PDT [92989] STATEMENT:  update subscriptions set subscriptions = array_cat(subscriptions, '{$1::int}') where user_id=$2::int
+2018-06-09 03:49:01.041 PDT [92989] ERROR:  invalid input syntax for integer: "$1::int" at character 70
+2018-06-09 03:49:01.041 PDT [92989] STATEMENT:  insert into subscriptions(subscriptions, user_id, created_on) values('{$1::int}', $2::int, now())
+2018-06-09 03:51:36.065 PDT [92989] ERROR:  invalid input syntax for integer: "$1::int" at character 70
+2018-06-09 03:51:36.065 PDT [92989] STATEMENT:  insert into subscriptions(subscriptions, user_id, created_on) values('{$1::int}', $2::int, now())
+2018-06-09 03:52:01.851 PDT [92989] ERROR:  invalid input syntax for integer: "$1::int" at character 67
+2018-06-09 03:52:01.851 PDT [92989] STATEMENT:  update subscriptions set subscriptions = array_cat(subscriptions, '{$1::int}') where user_id=$2::int
+2018-06-09 08:23:41.745 PDT [26207] ERROR:  invalid input syntax for integer: "$1::int" at character 67
+2018-06-09 08:23:41.745 PDT [26207] STATEMENT:  update subscriptions set subscriptions = array_cat(subscriptions, '{$1::int}') where user_id=$2::int
+2018-06-09 08:25:28.107 PDT [26716] ERROR:  invalid input syntax for integer: "$1::int" at character 67
+2018-06-09 08:25:28.107 PDT [26716] STATEMENT:  update subscriptions set subscriptions = array_cat(subscriptions, '{$1::int}') where user_id=$2::int
+2018-06-09 08:28:07.274 PDT [27507] ERROR:  bind message supplies 2 parameters, but prepared statement "get-posts" requires 0
+2018-06-09 08:28:07.274 PDT [27507] STATEMENT:  insert into subscriptions(subscriptions, user_id, created_on) values('{3}', 1, now())
+2018-06-09 08:36:52.747 PDT [30842] ERROR:  syntax error at or near "{" at character 70
+2018-06-09 08:36:52.747 PDT [30842] STATEMENT:  insert into subscriptions(subscriptions, user_id, created_on) values({$1::int}, $2::int, now())
+2018-06-09 08:38:18.570 PDT [31398] ERROR:  invalid input syntax for integer: "$1::int" at character 70
+2018-06-09 08:38:18.570 PDT [31398] STATEMENT:  insert into subscriptions(subscriptions, user_id, created_on) values('{$1::int}', $2::int, now())
+2018-06-09 08:40:33.196 PDT [32025] ERROR:  invalid input syntax for integer: "$1::int" at character 70
+2018-06-09 08:40:33.196 PDT [32025] STATEMENT:  insert into subscriptions(subscriptions, user_id, created_on) values('{$1::int}', $2::int, now())
+2018-06-09 08:45:34.344 PDT [33952] ERROR:  invalid input syntax for integer: "$1::text" at character 70
+2018-06-09 08:45:34.344 PDT [33952] STATEMENT:  insert into subscriptions(subscriptions, user_id, created_on) values('{$1::text}', $2::int, now())
+2018-06-09 08:49:21.814 PDT [35314] ERROR:  invalid input syntax for integer: "$1::numeric::int" at character 70
+2018-06-09 08:49:21.814 PDT [35314] STATEMENT:  insert into subscriptions(subscriptions, user_id, created_on) values('{$1::numeric::int}', $2::int, now())
+2018-06-09 08:57:00.837 PDT [87361] ERROR:  syntax error at or near "describe" at character 1
+2018-06-09 08:57:00.837 PDT [87361] STATEMENT:  describe subscriptions;
+2018-06-09 09:11:40.964 PDT [87361] ERROR:  syntax error at or near "CREATE" at character 26
+2018-06-09 09:11:40.964 PDT [87361] STATEMENT:  drop table subscriptions
+	CREATE TABLE subscriptions(
+	 user_id int PRIMARY KEY,
+	 subscriptions varchar[],
+	 created_on TIMESTAMP DEFAULT NOW(),
+	 last_edited TIMESTAMP DEFAULT NOW()
+	);
+2018-06-09 09:11:45.730 PDT [87361] ERROR:  relation "subscriptions" already exists
+2018-06-09 09:11:45.730 PDT [87361] STATEMENT:  CREATE TABLE subscriptions(
+	 user_id int PRIMARY KEY,
+	 subscriptions varchar[],
+	 created_on TIMESTAMP DEFAULT NOW(),
+	 last_edited TIMESTAMP DEFAULT NOW()
+	);
+2018-06-09 09:13:06.012 PDT [42458] ERROR:  could not determine data type of parameter $1
+2018-06-09 09:13:06.012 PDT [42458] STATEMENT:  insert into subscriptions(subscriptions, user_id, created_on) values('{$1::varchar}', $2::int, now())
+2018-06-09 09:23:13.731 PDT [42735] ERROR:  could not determine data type of parameter $1
+2018-06-09 09:23:13.731 PDT [42735] STATEMENT:  insert into subscriptions(subscriptions, user_id, created_on) values('{$1::text}', $2::int, now())
+2018-06-09 09:26:35.598 PDT [46045] ERROR:  invalid input syntax for integer: "$1::int" at character 70
+2018-06-09 09:26:35.598 PDT [46045] STATEMENT:  insert into subscriptions(subscriptions, user_id, created_on) values('{$1::int}', $2::int, now())
+2018-06-09 09:27:27.366 PDT [46319] ERROR:  invalid input syntax for integer: "$1::int" at character 70
+2018-06-09 09:27:27.366 PDT [46319] STATEMENT:  insert into subscriptions(subscriptions, user_id, created_on) values('{$1::int}', $2::int, now())
+2018-06-09 09:29:09.854 PDT [46934] ERROR:  invalid input syntax for integer: "$1::int" at character 79
+2018-06-09 09:29:09.854 PDT [46934] STATEMENT:  insert into subscriptions( user_id, subscriptions,created_on) values($2::int, '{$1::int}',  now())
+2018-06-09 09:30:26.588 PDT [47373] ERROR:  syntax error at or near "{" at character 79
+2018-06-09 09:30:26.588 PDT [47373] STATEMENT:  insert into subscriptions( user_id, subscriptions,created_on) values($2::int, {$1::int},  now())
+2018-06-09 10:02:46.194 PDT [49686] ERROR:  syntax error at or near "'{$1::int}'" at character 83
+2018-06-09 10:02:46.194 PDT [49686] STATEMENT:  insert into subscriptions(user_id, subscriptions,created_on) values($2::int, null '{$1::int}',  now())
+2018-06-09 10:04:11.010 PDT [50141] ERROR:  invalid input syntax for integer: "$1::int" at character 78
+2018-06-09 10:04:11.010 PDT [50141] STATEMENT:  insert into subscriptions(user_id, subscriptions,created_on) values($2::int, '{$1::int}',  now())
+2018-06-09 10:08:31.042 PDT [51768] ERROR:  invalid input syntax for integer: "$1" at character 78
+2018-06-09 10:08:31.042 PDT [51768] STATEMENT:  insert into subscriptions(user_id, subscriptions,created_on) values($2::int, '{$1}'::int[],  now())
+2018-06-09 10:13:41.078 PDT [53602] ERROR:  invalid input syntax for integer: "{$1}" at character 84
+2018-06-09 10:13:41.078 PDT [53602] STATEMENT:  insert into subscriptions(user_id, subscriptions,created_on) values($2::int, ARRAY['{$1}']::int[],  now())
+2018-06-09 10:18:06.353 PDT [55106] ERROR:  invalid input syntax for integer: "$1::init" at character 78
+2018-06-09 10:18:06.353 PDT [55106] STATEMENT:  insert into subscriptions(user_id, subscriptions,created_on) values($2::int, '{$1::init}'::int[],  now())
+2018-06-09 10:18:45.833 PDT [55379] ERROR:  invalid input syntax for integer: "$1::ini" at character 78
+2018-06-09 10:18:45.833 PDT [55379] STATEMENT:  insert into subscriptions(user_id, subscriptions,created_on) values($2::int, '{$1::ini}'::int[],  now())
+2018-06-09 10:20:16.449 PDT [55642] ERROR:  invalid input syntax for integer: "$1::int" at character 78
+2018-06-09 10:20:16.449 PDT [55642] STATEMENT:  insert into subscriptions(user_id, subscriptions,created_on) values($2::int, '{$1::int}'::int[],  now())
+2018-06-09 10:24:13.137 PDT [56260] ERROR:  syntax error at or near "{" at character 78
+2018-06-09 10:24:13.137 PDT [56260] STATEMENT:  insert into subscriptions(user_id, subscriptions,created_on) values($2::int, {$1}::int[],  now())
+2018-06-09 10:28:11.707 PDT [57656] ERROR:  syntax error at or near "{" at character 79
+2018-06-09 10:28:11.707 PDT [57656] STATEMENT:  insert into subscriptions(user_id, subscriptions,created_on) values($2::int, `{$1}`::int[],  now())
+2018-06-09 10:50:30.251 PDT [66204] ERROR:  malformed array literal: "{$1}::int[]" at character 78
+2018-06-09 10:50:30.251 PDT [66204] DETAIL:  Junk after closing right brace.
+2018-06-09 10:50:30.251 PDT [66204] STATEMENT:  insert into subscriptions(user_id, subscriptions,created_on) values($2::int, '{$1}::int[]',  now())
+2018-06-09 10:51:37.687 PDT [66204] ERROR:  malformed array literal: "{$1}::int[]" at character 78
+2018-06-09 10:51:37.687 PDT [66204] DETAIL:  Junk after closing right brace.
+2018-06-09 10:51:37.687 PDT [66204] STATEMENT:  insert into subscriptions(user_id, subscriptions,created_on) values($2::int, '{$1}::int[]',  now())
+2018-06-09 10:54:42.464 PDT [67846] ERROR:  malformed array literal: "{$1}::int" at character 78
+2018-06-09 10:54:42.464 PDT [67846] DETAIL:  Junk after closing right brace.
+2018-06-09 10:54:42.464 PDT [67846] STATEMENT:  insert into subscriptions(user_id, subscriptions,created_on) values($2::int, '{$1}::int',  now())
+2018-06-09 11:04:20.590 PDT [71233] ERROR:  duplicate key value violates unique constraint "subscriptions_pkey"
+2018-06-09 11:04:20.590 PDT [71233] DETAIL:  Key (user_id)=(1) already exists.
+2018-06-09 11:04:20.590 PDT [71233] STATEMENT:  insert into subscriptions(user_id, subscriptions,created_on) values($2::int, array[$1::int],  now())
+2018-06-09 11:11:14.037 PDT [72284] ERROR:  duplicate key value violates unique constraint "subscriptions_pkey"
+2018-06-09 11:11:14.037 PDT [72284] DETAIL:  Key (user_id)=(1) already exists.
+2018-06-09 11:11:14.037 PDT [72284] STATEMENT:  insert into subscriptions(user_id, subscriptions,created_on) values($2::int, array[$1::int],  now())
+2018-06-09 11:13:04.380 PDT [74404] ERROR:  duplicate key value violates unique constraint "subscriptions_pkey"
+2018-06-09 11:13:04.380 PDT [74404] DETAIL:  Key (user_id)=(1) already exists.
+2018-06-09 11:13:04.380 PDT [74404] STATEMENT:  insert into subscriptions(user_id, subscriptions,created_on) values($2::int, array[$1::int],  now())
+2018-06-09 11:14:25.891 PDT [74616] ERROR:  duplicate key value violates unique constraint "subscriptions_pkey"
+2018-06-09 11:14:25.891 PDT [74616] DETAIL:  Key (user_id)=(1) already exists.
+2018-06-09 11:14:25.891 PDT [74616] STATEMENT:  insert into subscriptions(user_id, subscriptions,created_on) values($2::int, array[$1::int],  now())
+2018-06-09 11:14:44.799 PDT [74616] ERROR:  duplicate key value violates unique constraint "subscriptions_pkey"
+2018-06-09 11:14:44.799 PDT [74616] DETAIL:  Key (user_id)=(1) already exists.
+2018-06-09 11:14:44.799 PDT [74616] STATEMENT:  insert into subscriptions(user_id, subscriptions,created_on) values($2::int, array[$1::int],  now())
+2018-06-09 11:20:16.074 PDT [76375] ERROR:  invalid input syntax for integer: "NaN"
+2018-06-09 11:20:16.074 PDT [76375] STATEMENT:  insert into subscriptions(user_id, subscriptions,created_on) values($2::int, array[$1::int],  now())

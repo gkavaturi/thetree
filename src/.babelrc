@@ -1,0 +1,17 @@
+{
+  "presets":
+  [
+    "react",
+    ["env", { modules: false }]
+  ],
+
+  "plugins":
+  [
+    "transform-object-rest-spread",
+    "transform-class-properties",
+    "transform-promise-to-bluebird",
+    "transform-decorators-legacy",
+    "transform-react-display-name",
+    "react-hot-loader/babel"
+  ]
+}

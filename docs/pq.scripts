@@ -1,0 +1,43 @@
+CREATE TABLE account(
+ user_id serial PRIMARY KEY,
+ username VARCHAR (50) UNIQUE NOT NULL,
+ password VARCHAR (50) NOT NULL,
+ email VARCHAR (355) UNIQUE NOT NULL,
+ created_on TIMESTAMP DEFAULT NOW(),
+ last_login TIMESTAMP DEFAULT NOW()
+);
+
+ALTER TABLE account ALTER COLUMN created_on 
+SET DEFAULT now();
+
+insert into account(username, password, email) values('adam','123','adam@thetree.com');
+insert into account(username, password, email) values('eve','123','eve@thetree.com');
+insert into account(username, password, email) values('god','123','god@adobe.com');
+
+CREATE TABLE posts(
+ post_id serial PRIMARY KEY,
+ user_id int,
+ message_body TEXT NOT NULL,
+ created_on TIMESTAMP DEFAULT NOW(),
+ last_edited TIMESTAMP DEFAULT NOW()
+);
+
+
+insert into posts(user_id, messageBody) values(1,'Adam went on a walk');
+insert into posts(user_id, messageBody) values(2,'My second tweet! oh boy');
+insert into posts(user_id, messageBody) values(2,'Eve likes leather jackets');
+insert into posts(user_id, messageBody) values(1,'Adam like green grass');
+
+insert into posts(user_id, messageBody) values(3,'God and his room mate Chugs were arm wrestling on a saturday night');
+insert into posts(user_id, messageBody) values(3,'God says dont forget to get your own towels to the pool');
+
+CREATE TABLE subscriptions(
+ user_id int PRIMARY KEY,
+ subscriptions int[],
+ created_on TIMESTAMP DEFAULT NOW(),
+ last_edited TIMESTAMP DEFAULT NOW()
+);
+
+insert into subscriptions(user_id, subscriptions) values(3,'{1,2}');
+
+SELECT P.* FROM posts AS P JOIN subscriptions AS S ON P.user_id = ANY(S.subscriptions) WHERE S.user_id = 3;
