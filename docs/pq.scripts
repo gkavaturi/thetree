@@ -35,7 +35,8 @@ CREATE TABLE subscriptions(
  user_id int PRIMARY KEY,
  subscriptions int[],
  created_on TIMESTAMP DEFAULT NOW(),
- last_edited TIMESTAMP DEFAULT NOW()
+ last_edited TIMESTAMP DEFAULT NOW(),
+ private boolean DEFAULT FALSE
 );
 
 insert into subscriptions(user_id, subscriptions) values(3,'{1,2}');

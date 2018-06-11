@@ -1,8 +1,8 @@
 {
   "private": true,
-  "name": "cheiweter",
+  "name": "triller",
   "version": "1.0.0",
-  "description": "twitter made by cheiwe",
+  "description": "twitter clone",
   "repository": {
     "type": "git",
     "url": ""

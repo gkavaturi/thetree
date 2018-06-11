@@ -2,16 +2,51 @@ import { reduxModule } from 'react-website'
 
 const redux = reduxModule('USERS');
 
+export const submitLogin = redux.action
+(
+	'SUBMIT_LOGN',
+	async ({ http }, id) =>
+	{
+		return await http.post(`/api/login`, { user, password })
+	}	
+)
+
+export const getFeed = redux.action
+(
+	'GET_FEED',
+	async ({ http }, id) =>
+	{
+		return await http.get(`/api/feed/${id}`)
+	}	
+)
+
+export const setPrivacy = redux.action
+(
+	'GET_FEED',
+	async ({ http }, { id, flag }) =>
+	{
+		return await http.post(`/api/privacy/`, { id, flag })
+	}	
+)
+
 export const getUsers = redux.action
 (
 	'GET_USERS',
-	async ({ http }) =>
+	async ({ http }, id) =>
 	{
-		await delay(1000)
-		const ids = await http.get('/api/example/users')
-		return await Promise.all(ids.map(id => http.get(`/api/example/users/${id}`)))
+		return await http.get(`/api/example/${id}`);
 	},
 	'users'
+)
+
+export const followUser = redux.action
+(
+	'FOLLOW_USER',
+	async ({ http }, { subscriberId, publisherId }) =>
+	{
+		await delay(1500)
+		await http.post(`/api/subscribe`, { subscriberId, publisherId })
+	}
 )
 
 export const addUser = redux.action

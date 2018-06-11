@@ -10,7 +10,8 @@ import
 	connectUsers,
 	getUsers,
 	addUser,
-	deleteUser
+	deleteUser,
+	getFeed
 }
 from '../redux/users'
 

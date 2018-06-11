@@ -5,6 +5,7 @@ import App     from './App'
 
 import Users           from './pages/Users'
 import Home            from './pages/Home'
+import Login            from './pages/Login'
 
 import GenericError    from './pages/errors/Error'
 import Unauthenticated from './pages/errors/Unauthenticated'
@@ -23,6 +24,10 @@ export default
 		<Route
 			path="users"
 			component={ Users }/>
+
+		<Route
+			path="login"
+			component={ Login }/>
 
 		<Route
 			path="unauthenticated"

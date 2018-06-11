@@ -45,7 +45,7 @@ export default function(api)
         return getRows(query);
     }
 
-    api.post('/login', async ({ name, password }, { setCookie }) => {
+    api.post('/api/login', async ({ name, password }, { setCookie }) => {
         if(!name || !password) {
             throw errors.Input_rejected(`missing parameters`); 
         }
@@ -80,7 +80,7 @@ export default function(api)
         setCookie('authentication', token, { signed: false })
     })
 
-    api.post('/subscribe', async ( { subscriberId, publisherId }, { user , role }) => {
+    api.post('/api/subscribe', async ( { subscriberId, publisherId }, { user , role }) => {
         if(!subscriberId || !publisherId) {
             throw errors.Input_rejected(`missing parameters`); 
         }
@@ -103,7 +103,7 @@ export default function(api)
         return rows;
     });
 
-    api.get('/subscriptions/:id', async ({ id }, { user , role }) =>
+    api.get('/api/subscriptions/:id', async ({ id }, { user , role }) =>
     {        
         if(!id) {
             throw errors.Input_rejected(`missing parameters`); 
@@ -112,7 +112,7 @@ export default function(api)
         return rows;
     });
 
-    api.get('/posts/:id', async ({ id }, { user, role }) => {
+    api.get('/api/posts/:id', async ({ id }, { user, role }) => {
         if(!id) {
             throw errors.Input_rejected(`missing parameters`); 
         }
@@ -125,7 +125,7 @@ export default function(api)
         return rows;
     });
 
-    api.get('/feed/:id', async ({ id }, { user, role }) => {
+    api.get('/api/feed/:id', async ({ id }, { user, role }) => {
         if(!id) {
             throw errors.Input_rejected(`missing parameters`); 
         }

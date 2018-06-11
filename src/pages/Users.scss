@@ -47,8 +47,10 @@
 	height : auto;
 }
 
-.add-user
+.login-user
 {
+	width: 300px;
+  margin: auto;
 	padding : 2rem;
 }
 
@@ -64,4 +66,8 @@
 {
 	width : auto;
 	margin-right : 1rem;
+}
+
+.login-user__field {
+	margin: 20px 0;
 }
