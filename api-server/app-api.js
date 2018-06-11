@@ -125,7 +125,7 @@ export default function(api)
         return rows;
     });
 
-    api.get('/feed/:id', async ({ id }, { userInfo, role }) => {
+    api.get('/feed/:id', async ({ id }, { user, role }) => {
         if(!id) {
             throw errors.Input_rejected(`missing parameters`); 
         }

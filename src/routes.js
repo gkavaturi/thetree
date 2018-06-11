@@ -3,7 +3,6 @@ import { Route, IndexRoute } from 'react-router'
 
 import App     from './App'
 
-import Users           from './pages/Users'
 import Home            from './pages/Home'
 import Login            from './pages/Login'
 
@@ -20,10 +19,6 @@ export default
 
 		<IndexRoute
 			component={ Home }/>
-
-		<Route
-			path="users"
-			component={ Users }/>
 
 		<Route
 			path="login"

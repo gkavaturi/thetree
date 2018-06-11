@@ -29,15 +29,6 @@ export const setPrivacy = redux.action
 	}	
 )
 
-export const getUsers = redux.action
-(
-	'GET_USERS',
-	async ({ http }, id) =>
-	{
-		return await http.get(`/api/example/${id}`);
-	},
-	'users'
-)
 
 export const followUser = redux.action
 (
@@ -49,25 +40,6 @@ export const followUser = redux.action
 	}
 )
 
-export const addUser = redux.action
-(
-	'ADD_USER',
-	async ({ http }, user) =>
-	{
-		await delay(1500)
-		await http.post(`/api/example/users`, user)
-	}
-)
-
-export const deleteUser = redux.action
-(
-	'DELETE_USER',
-	async ({ http }, id) =>
-	{
-		await delay(1000)
-		await http.delete(`/api/example/users/${id}`)
-	}
-)
 
 // A little helper for Redux `@connect()`
 export const connectUsers = redux.getProperties

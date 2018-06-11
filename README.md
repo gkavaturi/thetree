@@ -8,7 +8,7 @@ Features
 * Webpack 2
 * Development mode: hot reload for React components, hot reload for Redux reducers and actions
 
-DB: Postgres (psql.scripts & app-api.js has the details)
+DB: Postgres (pgql.scripts & app-api.js has the details)
 
 
 Quick Start
