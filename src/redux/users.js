@@ -4,10 +4,10 @@ const redux = reduxModule('USERS');
 
 export const submitLogin = redux.action
 (
-	'SUBMIT_LOGN',
-	async ({ http }, id) =>
+	'SUBMIT_LOGIN',
+	async ({ http }, { name, password }) =>
 	{
-		return await http.post(`/api/login`, { user, password })
+		return await http.post(`/api/login`, { name, password })
 	}	
 )
 
@@ -17,7 +17,8 @@ export const getFeed = redux.action
 	async ({ http }, id) =>
 	{
 		return await http.get(`/api/feed/${id}`)
-	}	
+	},
+	'users'
 )
 
 export const setPrivacy = redux.action

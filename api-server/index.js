@@ -11,7 +11,7 @@ const apiService = api
   {
     userInfo: payload => ({ roles: payload.roles })
   },
-  api: [ app_api]
+  api: [ app_api ]
 })
 
 
