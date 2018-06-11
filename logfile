@@ -260,3 +260,12 @@
 2018-06-09 11:14:44.799 PDT [74616] STATEMENT:  insert into subscriptions(user_id, subscriptions,created_on) values($2::int, array[$1::int],  now())
 2018-06-09 11:20:16.074 PDT [76375] ERROR:  invalid input syntax for integer: "NaN"
 2018-06-09 11:20:16.074 PDT [76375] STATEMENT:  insert into subscriptions(user_id, subscriptions,created_on) values($2::int, array[$1::int],  now())
+2018-06-10 23:03:14.630 PDT [87361] ERROR:  there is no parameter $1 at character 153
+2018-06-10 23:03:14.630 PDT [87361] STATEMENT:  SELECT P.post_id, P.user_id, P.message_body, P.created_on FROM posts AS P JOIN subscriptions AS S ON P.user_id = ANY(S.subscriptions) WHERE S.user_id = $1::int
+	;
+2018-06-10 23:05:03.233 PDT [87361] ERROR:  missing FROM-clause entry for table "s" at character 126
+2018-06-10 23:05:03.233 PDT [87361] STATEMENT:  SELECT P.post_id, P.user_id, P.message_body, P.created_on, A.username FROM posts AS P JOIN subscriptions  ON P.user_id = ANY(S.subscriptions) JOIN account on P.user_id = A.id WHERE S.user_id = 3;
+2018-06-10 23:05:25.655 PDT [87361] ERROR:  missing FROM-clause entry for table "a" at character 172
+2018-06-10 23:05:25.655 PDT [87361] STATEMENT:  SELECT P.post_id, P.user_id, P.message_body, P.created_on, A.username FROM posts AS P JOIN subscriptions S ON P.user_id = ANY(S.subscriptions) JOIN account on P.user_id = A.id WHERE S.user_id = 3;
+2018-06-10 23:05:36.955 PDT [87361] ERROR:  column a.id does not exist at character 174
+2018-06-10 23:05:36.955 PDT [87361] STATEMENT:  SELECT P.post_id, P.user_id, P.message_body, P.created_on, A.username FROM posts AS P JOIN subscriptions S ON P.user_id = ANY(S.subscriptions) JOIN account A on P.user_id = A.id WHERE S.user_id = 3;

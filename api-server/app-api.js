@@ -67,7 +67,7 @@ export default function(api)
         {
             throw new errors.InputRejected(`Wrong password`)
         }
- 
+
         const tokenId =  uuidv1();// a randomly generated unique id of some kind
         const payload = { roles: ['admin'] }
  
@@ -125,7 +125,7 @@ export default function(api)
         return rows;
     });
 
-    api.get('/feed/:id', async ({ id }, { user, role }) => {
+    api.get('/feed/:id', async ({ id }, { userInfo, role }) => {
         if(!id) {
             throw errors.Input_rejected(`missing parameters`); 
         }

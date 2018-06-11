@@ -17,13 +17,12 @@ export const getFeed = redux.action
 	async ({ http }, id) =>
 	{
 		return await http.get(`/api/feed/${id}`)
-	},
-	'users'
+	}
 )
 
 export const setPrivacy = redux.action
 (
-	'GET_FEED',
+	'SET_PRIVACY',
 	async ({ http }, { id, flag }) =>
 	{
 		return await http.post(`/api/privacy/`, { id, flag })
